@@ -37,7 +37,9 @@ Answer the following questions
 - Which gene has the highest mean expression value across all samples?
 - which gene has the greatest difference in expression between the healthy female sample and the mild-Covid-19 female sample? What is that difference?
 - How many genes have a higher expression in the female sample with mild-Covid-19 as compared to the healthy female sample?
-
+- Plot the median healthy sample expression against the median severe-Covid-19 samples
+- Which gene has a the largest median increase in expression in severe-Covid-19 samples as compared to the control? 
+- Use the file ```GPL26963-20921.array_data.txt``` to find and report the gene name associated with the tag found in the above step. 
 
 
 
