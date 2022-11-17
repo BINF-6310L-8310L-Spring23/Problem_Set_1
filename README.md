@@ -8,7 +8,7 @@ Your problem set should be reported as an R Markdown file (PDF or HTML) with the
 
 ### Task 1
 
-In your R Markdown file you must include at least one instanance of _each_ of the following
+In your R Markdown file you must include at least one instanance of _each_ of the following (1 point each)
 
 - Text/comment describing what you are doing
 - Two different  heading levels
@@ -32,14 +32,21 @@ The samples correspond to the table below
 
 ### Task 3
 
-Answer the following questions 
+Answer the following questions (1 point each)
 
 - Which gene has the highest mean expression value across all samples?
-- which gene has the greatest difference in expression between the healthy female sample and the mild-Covid-19 female sample? What is that difference?
+- Which gene has the greatest difference in expression between the healthy female sample and the mild-Covid-19 female sample? What is that difference?
 - How many genes have a higher expression in the female sample with mild-Covid-19 as compared to the healthy female sample?
 - Plot the median healthy sample expression against the median severe-Covid-19 samples
-- Which gene has a the largest median increase in expression in severe-Covid-19 samples as compared to the control? 
+- What percent of genes have higher median expression in Covid-19 samples compared to healthy control? 
+- Which gene has a the largest increase in median expression in severe-Covid-19 samples as compared to the control? 
 - Use the file ```GPL26963-20921.array_data.txt``` to find and report the gene name associated with the tag found in the above step. 
+- Which gene has the largest incrase in median expression in healthy control samples as opposed to severe-Covid-19 samples?
+- What is the gene name associated with the gene tag found in the above step
+
+### Task 4
+
+Knit your document and upload it to canvas. 
 
 
 
