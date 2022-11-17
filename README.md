@@ -32,7 +32,13 @@ The samples correspond to the table below
 
 ### Task 3
 
-Answer 
+Answer the following questions 
+
+- Which gene has the highest mean expression value across all samples?
+- which gene has the greatest difference in expression between the healthy female sample and the mild-Covid-19 female sample? What is that difference?
+- How many genes have a higher expression in the female sample with mild-Covid-19 as compared to the healthy female sample?
+
+
 
 
 
