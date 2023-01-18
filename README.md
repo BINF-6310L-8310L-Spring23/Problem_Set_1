@@ -41,7 +41,7 @@ Answer the following questions (1 point each)
 - What percent of genes have higher median expression in Covid-19 samples compared to healthy control? 
 - Which gene has a the largest increase in median expression in severe-Covid-19 samples as compared to the control? 
 - Use the file ```GPL26963-20921.array_data.txt``` to find and report the gene name associated with the tag found in the above step. 
-- Which gene has the largest incrase in median expression in healthy control samples as opposed to severe-Covid-19 samples?
+- Which gene has the largest increase in median expression in healthy control samples as opposed to severe-Covid-19 samples?
 - What is the gene name associated with the gene tag found in the above step
 
 ### Task 4
