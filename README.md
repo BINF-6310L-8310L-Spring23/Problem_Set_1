@@ -2,19 +2,56 @@
 Directions for Problem Set 1
 
 ### Purpose
-The purpose of this problem set is to continue to build your comfort with R data, R Markdown and R manipulation
+The purpose of this problem set is to continue building your comfort with R data, R Markdown, and R manipulation.
 
-Your problem set should be reported as an R Markdown file (PDF or HTML) with the answers clearly labelled 
+Your problem set should be reported as an R Markdown file (PDF or HTML) with the answers clearly labeled 
 
-### Task 1
+# Question 1 - Formatting Assignment (1 point each)
 
-In your R Markdown file you must include at least one instanance of _each_ of the following (1 point each)
+To practice formatting in markdown your completed markdown file should have the following features. 
 
 - Text/comment describing what you are doing
 - Two different  heading levels
 - __Bolded__ text
 - _Italic_ text
-- ***Bold and Italic text*** 
+- ***Bold and Italic text***
+- 
+
+### Step 1
+Install R-Markdown in R-studio
+
+```install.packages('rmarkdown')```
+
+Optional - you can also create PDF files if you want but you need to install tinytex
+
+```
+install.packages('tinytex')
+tinytex::install_tinytex()  # install TinyTeX
+```
+
+### Step 2
+Create a new R-Markdown file
+
+Make sure to save it in a directory where you can put other files
+
+
+### Step 3
+
+Create a new r data chunk for importing our sample data
+
+Import the file ```GSE164805_series_matrix_edited.txt``` using the ```read.table()``` command and save it as a new variable
+
+_hint_ Our data has a header, don't forget to set that when you call read.table
+
+This is a modified gene expression dataset.
+
+It has been modified from the following paper: "Inflammation and Antiviral Immune Response Associated With Severe Progression of COVID-19" - Zhang et al 2021. We will use the full dataset in a later lab
+
+
+
+
+
+
 
 ### Task 2 
 
