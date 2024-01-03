@@ -1,12 +1,16 @@
 # Problem_Set_1
 Directions for Problem Set 1
 
+**Be sure to answer the Questions in the associated Canvas Quiz**
+
 ### Purpose
 The purpose of this problem set is to continue building your comfort with R data, R Markdown, and R manipulation.
 
 Your problem set should be reported as an R Markdown file (PDF or HTML) with the answers clearly labeled 
 
 # Question 1 - Formatting Assignment (1 point each)
+
+_There is no section in the quiz to put these_
 
 To practice formatting in markdown your completed markdown file should have the following features. 
 
@@ -17,7 +21,7 @@ To practice formatting in markdown your completed markdown file should have the 
 - ***Bold and Italic text***
 - 
 
-### Step 1
+### Step 1 - Install R-Markdown
 Install R-Markdown in R-studio
 
 ```install.packages('rmarkdown')```
@@ -29,61 +33,96 @@ install.packages('tinytex')
 tinytex::install_tinytex()  # install TinyTeX
 ```
 
-### Step 2
+### Step 2 - Create new R-Markdown file
 Create a new R-Markdown file
 
 Make sure to save it in a directory where you can put other files
 
 
-### Step 3
+### Step 3 - Import the data
 
 Create a new r data chunk for importing our sample data
 
 Import the file ```GSE164805_series_matrix_edited.txt``` using the ```read.table()``` command and save it as a new variable
 
-_hint_ Our data has a header, don't forget to set that when you call read.table
+_hint_ Our data has a header; don't forget to set that when you call ```read.table```
 
 This is a modified gene expression dataset.
 
-It has been modified from the following paper: "Inflammation and Antiviral Immune Response Associated With Severe Progression of COVID-19" - Zhang et al 2021. We will use the full dataset in a later lab
+It is from the following paper: "Inflammation and Antiviral Immune Response Associated With Severe Progression of COVID-19" - Zhang et al 2021. We will use the full dataset in a later lab
+
+# Question 2 
+
+How many rows are in the dataset? The function for this is ```nrow()```
+
+# Question 3
+
+How many columns are in the dataset? The function for this is ```ncol()```
+
+# Question 4
+
+Is the object storing our data a data frame or a matrix? You can check this using the Environment tab or the function ```str()```
+
+# Question 5 
+
+Are there any NAs in our dataset? 
+
+# Question 6
+
+Is the column ID_REF a factor? You can check this with the function ```is.factor()```
+
+# Question 7
+
+What is the line of code you would use to set the column ID_REF as a factor? 
+
+
+### Step 4 - Subset the data frame 
+
+We are interested in only the following data
+
+The genes (ID_REFs) 
+- ASHG19AP1B100028737V5
+- ASHG19AP1B100017453V5
+- ASHG19AP1B100004705V5
+
+For the individuals (columns)
+- GSM5019817
+- GSM5019827
+- GSM5019828
+
+Subset your data frame to include only those genes for only those individuals. 
+There are lots of ways to do this. Some examples are listed here: https://sparkbyexamples.com/r-programming/r-subset-data-frame-with-examples/
+
+# Question 8
+
+What is the mean expression across the three genes for GSM5019817?
+
+### Step 5 - Learn about wide to long format
+
+Our data is currently in **wide** format. In the wide format, each ID_REF appears only once and is associated with many variables (columns), each having its own value. 
+
+Each row, therefore, contains many different observations that fall in the same group
+
+Many times (like for visualization in ggplot) we need to have the data in **long** format where each row is a singular observation belonging to a specific variable. 
+
+For more information on wide and long format see this summary https://www.statology.org/long-vs-wide-data/
+
+There are two main functions to transition between long and wide - **tidyr** and **reshape2**
+
+Read about how to use these functions here: http://www.cookbook-r.com/Manipulating_data/Converting_data_between_wide_and_long_format/ 
+
+### Step 6 - Change the subset dataset to long format
+
+Add either tidyr or reshape2 to your setup chunk
+
+Use ```gather()``` or ```melt()``` to transform you dataframe to long format
+
+# Question 9
+
+How many observations in our subset data have a gene expression value greater than 4? 
 
 
 
-
-
-
-
-### Task 2 
-
-Import the dataset ```GSE164805_series_matrix.txt``` 
-
-This is the complete expression data from the manuscript 
-Zhang Q, Meng Y, Wang K, Zhang X et al. Inflammation and Antiviral Immune Response Associated With Severe Progression of COVID-19. Front Immunol 2021;12:631226. PMID: 33679778
-
-It has been slightly edited to remove the headers
-
-The samples correspond to the table below
-
-![image](https://user-images.githubusercontent.com/47755288/202544449-d768440a-cec1-427e-ba37-b0aebed1249a.png)
-
-
-### Task 3
-
-Answer the following questions (1 point each)
-
-- Which gene has the highest mean expression value across all samples?
-- Which gene has the greatest difference in expression between the healthy female sample and the mild-Covid-19 female sample? What is that difference?
-- How many genes have a higher expression in the female sample with mild-Covid-19 as compared to the healthy female sample?
-- Plot the median healthy sample expression against the median severe-Covid-19 samples
-- What percent of genes have higher median expression in Covid-19 samples compared to healthy control? 
-- Which gene has a the largest increase in median expression in severe-Covid-19 samples as compared to the control? 
-- Use the file ```GPL26963-20921.array_data.txt``` to find and report the gene name associated with the tag found in the above step. 
-- Which gene has the largest increase in median expression in healthy control samples as opposed to severe-Covid-19 samples?
-- What is the gene name associated with the gene tag found in the above step
-
-### Task 4
-
-Knit your document and upload it to canvas. 
 
 
 
