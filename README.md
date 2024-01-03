@@ -3,12 +3,12 @@ Directions for Problem Set 1
 
 **Be sure to answer the Questions in the associated Canvas Quiz**
 
-### Purpose
+## Purpose
 The purpose of this problem set is to continue building your comfort with R data, R Markdown, and R manipulation.
 
 Your problem set should be reported as an R Markdown file (PDF or HTML) with the answers clearly labeled 
 
-# Question 1 - Formatting Assignment (1 point each)
+### Question 1 - Formatting Assignment (1 point each)
 
 _There is no section in the quiz to put these_
 
@@ -21,7 +21,7 @@ To practice formatting in markdown your completed markdown file should have the 
 - ***Bold and Italic text***
 - 
 
-### Step 1 - Install R-Markdown
+## Step 1 - Install R-Markdown
 Install R-Markdown in R-studio
 
 ```install.packages('rmarkdown')```
@@ -33,13 +33,13 @@ install.packages('tinytex')
 tinytex::install_tinytex()  # install TinyTeX
 ```
 
-### Step 2 - Create new R-Markdown file
+## Step 2 - Create new R-Markdown file
 Create a new R-Markdown file
 
 Make sure to save it in a directory where you can put other files
 
 
-### Step 3 - Import the data
+## Step 3 - Import the data
 
 Create a new r data chunk for importing our sample data
 
@@ -51,32 +51,32 @@ This is a modified gene expression dataset.
 
 It is from the following paper: "Inflammation and Antiviral Immune Response Associated With Severe Progression of COVID-19" - Zhang et al 2021. We will use the full dataset in a later lab
 
-# Question 2 
+### Question 2 
 
 How many rows are in the dataset? The function for this is ```nrow()```
 
-# Question 3
+### Question 3
 
 How many columns are in the dataset? The function for this is ```ncol()```
 
-# Question 4
+### Question 4
 
 Is the object storing our data a data frame or a matrix? You can check this using the Environment tab or the function ```str()```
 
-# Question 5 
+### Question 5 
 
 Are there any NAs in our dataset? 
 
-# Question 6
+### Question 6
 
 Is the column ID_REF a factor? You can check this with the function ```is.factor()```
 
-# Question 7
+### Question 7
 
 What is the line of code you would use to set the column ID_REF as a factor? 
 
 
-### Step 4 - Subset the data frame 
+## Step 4 - Subset the data frame 
 
 We are interested in only the following data
 
@@ -93,11 +93,11 @@ For the individuals (columns)
 Subset your data frame to include only those genes for only those individuals. 
 There are lots of ways to do this. Some examples are listed here: https://sparkbyexamples.com/r-programming/r-subset-data-frame-with-examples/
 
-# Question 8
+### Question 8
 
 What is the mean expression across the three genes for GSM5019817?
 
-### Step 5 - Learn about wide to long format
+## Step 5 - Learn about wide to long format
 
 Our data is currently in **wide** format. In the wide format, each ID_REF appears only once and is associated with many variables (columns), each having its own value. 
 
@@ -111,13 +111,13 @@ There are two main functions to transition between long and wide - **tidyr** and
 
 Read about how to use these functions here: http://www.cookbook-r.com/Manipulating_data/Converting_data_between_wide_and_long_format/ 
 
-### Step 6 - Change the subset dataset to long format
+## Step 6 - Change the subset dataset to long format
 
 Add either tidyr or reshape2 to your setup chunk
 
 Use ```gather()``` or ```melt()``` to transform you dataframe to long format
 
-# Question 9
+### Question 9
 
 How many observations in our subset data have a gene expression value greater than 4? 
 
