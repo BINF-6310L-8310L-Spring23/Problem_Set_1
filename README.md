@@ -19,7 +19,7 @@ To practice formatting in markdown your completed markdown file should have the 
 - __Bolded__ text
 - _Italic_ text
 - ***Bold and Italic text***
-- 
+  
 
 ## Step 1 - Install R-Markdown
 Install R-Markdown in R-studio
