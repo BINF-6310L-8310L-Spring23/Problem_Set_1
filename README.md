@@ -95,7 +95,7 @@ There are lots of ways to do this. Some examples are listed here: https://sparkb
 
 ### Question 8
 
-What is the mean expression across the three genes for GSM5019817?
+What is the mean expression across the three genes for GSM5019827?
 
 ## Step 5 - Learn about wide to long format
 
@@ -113,13 +113,23 @@ Read about how to use these functions here: http://www.cookbook-r.com/Manipulati
 
 ## Step 6 - Change the subset dataset to long format
 
-Add either tidyr or reshape2 to your setup chunk
+Add either tidyr or reshape2 to your small subset data. 
 
 Use ```gather()``` or ```melt()``` to transform you dataframe to long format
 
+The commonly used figure-making package ggplot requires the data to be in long format. 
+
+To install ggplot use ```install.packages("ggplot2")```
+
+If you are new to ggplot you can read a basic introduction here: https://ggplot2.tidyverse.org/articles/ggplot2.html 
+If you are new to the ```geom_boxplot``` ggplot then you can refer to this tutorial https://www.sthda.com/english/wiki/ggplot2-box-plot-quick-start-guide-r-software-and-data-visualization 
+
+
 ### Question 9
 
-How many observations in our subset data have a gene expression value greater than 4? 
+Create a boxplot in ggplot2 showing the variation in gene expression (x-axis) across the different individuals. 
+Paste the figure into the canvas question. 
+
 
 
 
